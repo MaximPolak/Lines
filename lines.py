@@ -10,7 +10,7 @@ for i, cislo in enumerate(cisla_radku):
         if rozsah[1] < rozsah[0]:
             seznam_radku_na_pretisknuti.append(cislo)
         else:
-            for y in range(int(rozsah[0]), int(rozsah[1]) + 1):
+            for y in range(int(rozsah[0]), int(rozsah[1]) + 1, 1 if len(rozsah) == 2 else int(rozsah[2])):
                 seznam_radku_na_pretisknuti.append(str(y))
     else:
         seznam_radku_na_pretisknuti.append(cislo)

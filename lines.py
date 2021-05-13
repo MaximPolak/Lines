@@ -12,9 +12,7 @@ for cislo in cisla_radku:
         seznam_radku_na_pretisknuti.add(int(cislo))
 
 if seznam_radku_na_pretisknuti:
-    for i, radek in enumerate(sys.stdin, start=1):
+    konec = max(seznam_radku_na_pretisknuti)
+    for i, radek in zip(range(1, konec + 1), sys.stdin):
         if i in seznam_radku_na_pretisknuti:
             print(radek, end="")
-            seznam_radku_na_pretisknuti.remove(i)
-        if not seznam_radku_na_pretisknuti:
-            break
